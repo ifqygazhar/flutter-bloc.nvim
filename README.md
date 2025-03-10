@@ -2,6 +2,8 @@
 
 A Neovim plugin for generating bloc and cubit boilerplate code with support for code actions.
 
+Note : This is plugin fork from wa11breaker/flutter-bloc.nvim, just remove the none-ls requirement depedencies.
+
 [![Preview](https://i.imgur.com/4GtjuPW.gif)](https://github.com/wa11breaker/flutter-bloc.nvim/assets/28669642/de135918-93ce-4157-95ab-9ad5971c45b4)
 
 #### Features
@@ -16,10 +18,7 @@ A Neovim plugin for generating bloc and cubit boilerplate code with support for 
 
 ```lua
 {
-  'wa11breaker/flutter-bloc.nvim',
-  dependencies = {
-      "nvimtools/none-ls.nvim", -- Required for code actions
-  },
+  'ifqygazhar/flutter-bloc.nvim',
   opts = {
     bloc_type = 'default', -- Choose from: 'default', 'equatable', 'freezed'
     use_sealed_classes = false,
@@ -32,10 +31,7 @@ A Neovim plugin for generating bloc and cubit boilerplate code with support for 
 
 ```lua
 use {
-  'wa11breaker/flutter-bloc.nvim',
-  requires = {
-    'nvimtools/none-ls.nvim',
-  },
+  'ifqygazhar/flutter-bloc.nvim',
   config = function()
     require('flutter-bloc').setup({
       bloc_type = 'default', -- Choose from: 'default', 'equatable', 'freezed'
